@@ -1,26 +1,22 @@
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import NavBar from '../NavBar';
 import './index.css';
 
-export default class componentName extends Component {
+
+class Header extends Component {
   static propTypes = {
     
   }
 
   render() {
     return (
-      <header>
+      <header className="header">
         <strong>HEADER</strong>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
+        <NavBar />
       </header>
     );
   }
-}
+};
+
+export default Header;

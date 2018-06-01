@@ -1,21 +1,21 @@
 
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-class Footer extends Component {
+class ViewResult extends Component {
   static propTypes = {
     
   }
 
   render() {
     return (
-      <footer className="footer">
-        <hr/>
-        <strong>FOOTER</strong>
-      </footer>
+      <div className="view-results">
+
+      </div>
     );
   }
 };
 
-export default Footer;
+export default ViewResult;
