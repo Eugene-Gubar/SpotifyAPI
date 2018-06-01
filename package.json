@@ -1,0 +1,29 @@
+{
+  "name": "music",
+  "version": "0.1.0",
+  "description": "This is Music Application for search through API Spotify",
+  "author": "Nero <eugene.gubar@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "reactjs",
+    "redux",
+    "spotify",
+    "api"
+  ],
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2"
+  }
+}
