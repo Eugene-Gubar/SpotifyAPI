@@ -13,7 +13,7 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <div className="blur select-song visuallyhidden">
+        <div className="blur select-song">
           <p className="caption-select">Please select song</p>
         </div>
         <div className="details-song">

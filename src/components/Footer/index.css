@@ -55,3 +55,20 @@ img.song-image-cover {
   margin-top: -104px;
   background-color: #fff;
 }
+
+div.blur.select-song {
+  position: absolute;
+  background: url('./blur-cover.png') no-repeat;
+  box-shadow: inset 0px 0px 20px 1px #808080;
+  width: 920px;
+  height: 160px;
+}
+
+p.caption-select {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 61px auto;
+}
