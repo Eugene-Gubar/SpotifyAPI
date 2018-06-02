@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import NavBar from '../NavBar';
 import './index.css';
 import SearchBar from '../SearchBar';
 
@@ -14,7 +13,6 @@ class Header extends Component {
     return (
       <header className="header">
         <strong>HEADER</strong>
-        <NavBar />
         <SearchBar />
       </header>
     );
