@@ -11,6 +11,16 @@
     "spotify",
     "api"
   ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -21,14 +31,6 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.6",
