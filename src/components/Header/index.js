@@ -12,7 +12,6 @@ class Header extends Component {
   render() {
     return (
       <header className="header">
-        <strong>HEADER</strong>
         <SearchBar />
       </header>
     );

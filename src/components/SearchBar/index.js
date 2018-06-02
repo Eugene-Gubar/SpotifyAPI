@@ -12,7 +12,8 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar">
-        <p>Search Bar</p>
+        <input type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
+        <span className="btn-search"></span>
       </div>
     );
   }

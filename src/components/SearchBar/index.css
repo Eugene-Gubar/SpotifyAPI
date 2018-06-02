@@ -1,0 +1,37 @@
+
+
+div.search-bar {
+  width: 410px;
+  height: 104px;
+  margin: 0px auto;
+}
+
+div.search-bar input[name="search"] {
+  display: block;
+  position: absolute;
+  width: 271px;
+  height: 70px;
+  background: #FFFFFF;
+  border: none;
+  margin: 0px;
+  top: 18px;
+  padding: 0px;
+  padding-left: 25px;
+  padding-right: 80px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #4F4F4F;
+}
+
+span.btn-search {
+  position: absolute;
+  width: 64px;
+  height: 43px;
+  display: block;
+  margin-left: 296px;
+  cursor: pointer;
+  margin-top: 31px;
+  background: url('./img/music-player.svg') no-repeat;
+}
