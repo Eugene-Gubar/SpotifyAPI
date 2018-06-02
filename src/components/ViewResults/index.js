@@ -15,7 +15,7 @@ class ViewResult extends Component {
     return (
       <div className="view-results">
         <div className="card-song">
-          <img src={linkin} alt=""/>
+          <a href="#"><img src={linkin} alt="" width="240" height="240"/></a>
           <div className="strip top-strip">
             <p className="caption band-name">linkin park</p>
           </div>

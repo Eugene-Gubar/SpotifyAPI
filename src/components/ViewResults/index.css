@@ -15,14 +15,16 @@ div.card-song {
   float: left;
 }
 
-div.card-song > img:hover {
+div.card-song img:hover {
   filter: none;
 }
 
-div.card-song > img {
+div.card-song img {
   float: left;
   background-color: #fff;
   filter: blur(2px);
+  width: 240px;
+  height: 240px;
 }
 
 div.strip {
