@@ -1,0 +1,21 @@
+
+
+div.error-page {
+  text-align: center;
+  width: 920px;
+  height: 640px;
+}
+
+div.error-page * {
+  margin: 0px;
+  padding: 0px;
+  font-size: 36px;
+  color: #fff;
+}
+
+div.wrap-container {
+  padding: 220px 25px 50px 25px;
+  max-height: 270px;
+  max-width: 920px;
+  overflow: hidden;
+}

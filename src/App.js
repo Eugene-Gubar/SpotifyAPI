@@ -7,7 +7,7 @@ import ViewResult from './components/ViewResults';
 
 class App extends Component {
   render() {
-    console.log(this);
+    console.log('Component App: ', this);
     return (
       <div className="app">
         <Header />

@@ -10,4 +10,8 @@ const middleware = [
 ];
 const enhancer = applyMiddleware(...middleware);
 
-export default createStore(rootReducer, {}, enhancer);
+const store = createStore(rootReducer, enhancer);
+
+window.store = store;
+
+export default store;

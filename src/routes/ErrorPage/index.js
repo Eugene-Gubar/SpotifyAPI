@@ -19,7 +19,7 @@ const ErrorPage = ({ location }) => {
 };
 
 ErrorPage.propTypes = {
-  location: PropTypes.string
+  location: PropTypes.object
 };
 
 export default ErrorPage;
