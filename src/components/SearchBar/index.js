@@ -58,6 +58,11 @@ class SearchBar extends Component {
     
   }
 
+  constructor() {
+    super();
+    this.search = '';
+  }
+
   UNSAFE_componentWillMount() {}
 
   render() {
@@ -65,11 +70,29 @@ class SearchBar extends Component {
     const { actionSearchTracks } = this.props;
     return (
       <div className="search-bar">
-        <input type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
-        <span onClick={actionSearchTracks} className="btn-search"></span>
+        <input onChange={this.hGetValueSearch} type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
+        <span onClick={this.hSearchTracks} className="btn-search"></span>
       </div>
     );
   }
+
+  hSearchTracks = () => {
+    const search = this.search;
+    if (search.length > 3) {
+      console.log('search > 3 symbols');
+      // actionSearchTracks(search);
+    } else {
+      console.log('view more symbols animation loader');
+      // notifyMoreSymbols();
+    }
+  }
+
+  hGetValueSearch = (e) => {
+    const { value } = e.target;
+    console.log(value);
+    this.search = value;
+  }
+
 };
 
 const props = (state) => {
