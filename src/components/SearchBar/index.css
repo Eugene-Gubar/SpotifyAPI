@@ -48,3 +48,16 @@ div.msg-notify {
   background-color: #00000094;
   padding: 0px 30px;
 }
+
+div.animation-loader {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 920px;
+  height: 640px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  left: 0px;
+  background-color: #1d1d1d8c;
+}

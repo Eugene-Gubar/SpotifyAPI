@@ -18,7 +18,7 @@ ReactDOM.render(
           <Router>
             <Switch>
               <Route exact path='/' component={App} />              
-              <Route exact path='/search/:search?' component={App} />
+              {/* <Route exact path='/search/:search?' component={App} /> */}
               <Route path='*' component={ErrorPage} />
             </Switch>
           </Router>

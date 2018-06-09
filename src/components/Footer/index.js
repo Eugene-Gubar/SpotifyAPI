@@ -35,6 +35,7 @@ class Footer extends Component {
     if (Array.isArray(tracks) && tracks.length > 0 && descId) {
       descTrack = tracks.filter(el => {
         if (el.id === descId) return true;
+        return false;
       });
       descTrack = descTrack[0];
     }

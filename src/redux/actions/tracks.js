@@ -1,14 +1,15 @@
 
-import { SEARCH_TRACKS } from '../../constants';
-import spotifyApi, { clearBadTokenInStorage, setTokenAccess, initToken } from '../../configs/apiSpotify';
+import { SEARCH_TRACKS, START, SUCCESS } from '../../constants';
+import spotifyApi, { clearBadTokenInStorage, initToken } from '../../configs/apiSpotify';
 
 
 function actionSearchTracks(search) {
 
   return dispatch => {
+    dispatch({ type: START });
     spotifyApi.searchTracks(search, { limit: 3 })
       .then((data) => {
-        dispatch({ type: SEARCH_TRACKS, search: data });
+        dispatch({ type: SEARCH_TRACKS + SUCCESS, search: data });
       }, (err) => {
         if (err.status === 401) {
           console.error(`ERROR STATUS ${err.status}, ERROR MESSAGE: ${err.message}`);

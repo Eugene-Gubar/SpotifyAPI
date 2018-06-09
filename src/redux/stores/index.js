@@ -3,7 +3,6 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
-window.thunk = thunk;
 
 const middleware = [
   thunk,
@@ -13,6 +12,7 @@ const enhancer = applyMiddleware(...middleware);
 
 const store = createStore(rootReducer, enhancer);
 
-window.store = store;
+// window.thunk = thunk;
+// window.store = store;
 
 export default store;

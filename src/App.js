@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('Component App: ', this);
+    // console.log('Component App: ', this);
     return (
       <div className="app">
         <Header />
@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   getDescFooter = (id) => {
-    console.log('APP getDescFooter id:', id);
+    // console.log('APP getDescFooter id:', id);
     this.setState({descId: id});
   }
 

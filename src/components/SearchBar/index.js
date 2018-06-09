@@ -5,14 +5,17 @@ import PropTypes from 'prop-types';
 import './index.css';
 import { connect } from 'react-redux';
 import actionSearchTracks from '../../redux/actions/tracks';
-import spotifyApi, { initToken, hasTokenSpotify, clearBadTokenInStorage, setTokenAccess } from '../../configs/apiSpotify';
+import { initToken, hasTokenSpotify, setTokenAccess } from '../../configs/apiSpotify';
+import loaderAnimationWedges from './img/loader/Wedges.svg';
+import loaderAnimationGear from './img/loader/Gear.svg';
 
 if (!hasTokenSpotify()) initToken();
 setTokenAccess();
 
 class SearchBar extends Component {
   static propTypes = {
-    actionSearchTracks: PropTypes.func
+    actionSearchTracks: PropTypes.func,
+    loader: PropTypes.bool
   }
 
   constructor() {
@@ -29,14 +32,17 @@ class SearchBar extends Component {
   
 
   render() {
-    console.log('Component SearchBar: ', this);
+    // console.log('Component SearchBar: ', this);
     const { notify } = this.state;
-
+    const { loader } = this.props;
+    // console.log('----------------------LOADERBOOL: ', loader);
+    
     return (
       <div className="search-bar">
         <input onChange={this.hGetValueSearch} onKeyPress={this.hKeyPressEnter} type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
         <span onClick={this.hSearchTracks} className="btn-search"></span>
         {(notify) ? this.notifyMoreSymbols() : ''}
+        {(loader) ? this.showLoader() : ''}
       </div>
     );
 
@@ -44,7 +50,7 @@ class SearchBar extends Component {
 
   hKeyPressEnter = (e) => {
     
-    if(e.key == 'Enter') 
+    if(e.key === 'Enter') 
       this.hSearchTracks();
   }
 
@@ -52,12 +58,10 @@ class SearchBar extends Component {
     const search = this.search;
     const { actionSearchTracks } = this.props;
     if (search.length > 3) {
-      console.log('search > 3 symbols');
       this.setState({notify: false});
       actionSearchTracks(search);
       document.getElementsByClassName('footer')[0].firstElementChild.className = 'blur select-song';
     } else {
-      console.log('please enter more 3 symbols');
       this.setState({notify: true});
     }
   }
@@ -70,13 +74,22 @@ class SearchBar extends Component {
     );
   }
 
+  showLoader = () => { 
+    return (
+      <div className="animation-loader">
+        <img src={(Math.random() < 0.5) ? loaderAnimationWedges : loaderAnimationGear} alt=""/>
+      </div>
+    );
+  }
+
   hGetValueSearch = (e) => {
     const { value } = e.target;
-    console.log(value);
     this.search = value;
   }
 
 };
 
 
-export default connect(null, { actionSearchTracks })(SearchBar);
+export default connect((state) => ({
+  loader: state.tracks.loader
+}), { actionSearchTracks })(SearchBar);
