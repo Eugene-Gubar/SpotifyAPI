@@ -1,5 +1,6 @@
 {
   "name": "spotifyapi",
+  "homepage": "https://eugene-gubar.github.io/SpotifyAPI",
   "version": "0.1.0",
   "description": "This is Music Application for search through API Spotify",
   "author": "Nero <eugene.gubar@gmail.com>",
@@ -14,6 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -41,6 +44,7 @@
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.8.2"
+    "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^1.2.0"
   }
 }
