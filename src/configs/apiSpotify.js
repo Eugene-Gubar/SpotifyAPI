@@ -3,7 +3,7 @@
 import Spotify from 'spotify-web-api-js';
 
 export const clientId = 'ba0ecd105e7e43c2917462c8400d04a7';
-export const redirectUri = 'http:%2F%2Flocalhost%3A%33%30%30%30';
+export const redirectUri = 'https%3A%2F%2Feugene-gubar.github.io%2FSpotifyAPI';
 export const getTokenUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&state=123`;
 
 
