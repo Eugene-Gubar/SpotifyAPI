@@ -9,7 +9,7 @@ import store from './redux/stores';
 import registerServiceWorker from './registerServiceWorker';
 import ErrorPage from './routes/ErrorPage';
 
-
+var pathname = window.location.pathname;
 ReactDOM.render(
   <Provider store={store}>
     <div className="main">
@@ -17,7 +17,7 @@ ReactDOM.render(
         <ErrorBoundary>
           <Router>
             <Switch>
-              <Route exact path='/' component={App} />              
+              <Route exact path='pathname' component={App} />              
               {/* <Route exact path='/search/:search?' component={App} /> */}
               <Route path='*' component={ErrorPage} />
             </Switch>
