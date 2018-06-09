@@ -35,3 +35,16 @@ span.btn-search {
   margin-top: 31px;
   background: url('./img/music-player.svg') no-repeat;
 }
+
+
+div.msg-notify {
+  position: absolute;
+  bottom: 300px;
+  width: 860px;
+  text-align: center;
+  left: 0px;
+  color: #fff;
+  z-index: 9999;
+  background-color: #00000094;
+  padding: 0px 30px;
+}

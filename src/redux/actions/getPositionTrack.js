@@ -1,7 +1,5 @@
 
 import { SEARCH_TRACKS } from '../../constants';
-import spotifyApi, { clearBadTokenInStorage, setTokenAccess, initToken } from '../../configs/apiSpotify';
-
 
 function actionSearchTracks(search) {
 

@@ -3,6 +3,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
+window.thunk = thunk;
 
 const middleware = [
   thunk,

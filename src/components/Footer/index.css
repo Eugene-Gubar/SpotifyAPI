@@ -1,9 +1,11 @@
 
 
 footer.footer {
+  position: absolute;
   width: 920px;
   height: 160px;
   background: #4F4F4F;
+  bottom: 0px;
 }
 
 div.details-caption {
@@ -35,6 +37,10 @@ div.details-caption > :last-child {
   vertical-align: sub;
 }
 
+div.details-author p {
+  max-width: 210px !important;
+}
+
 div.details-caption > :first-child {
   font-size: 21px;
   font-weight: 600;
@@ -58,7 +64,7 @@ img.song-image-cover {
 
 div.blur.select-song {
   position: absolute;
-  background: url('./blur-cover.png') no-repeat;
+  background: url('./img/blur-cover.png') no-repeat;
   box-shadow: inset 0px 0px 20px 1px #808080;
   width: 920px;
   height: 160px;
