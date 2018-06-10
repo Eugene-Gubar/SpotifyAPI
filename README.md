@@ -14,4 +14,4 @@ The site works on client JS and is deployed on the GitHub Page.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT [License](https://github.com/Eugene-Gubar/SpotifyAPI/blob/master/LICENSE).

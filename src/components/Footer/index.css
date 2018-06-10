@@ -1,11 +1,11 @@
 
 
 footer.footer {
-  position: absolute;
+  /* position: absolute; */
   width: 920px;
   height: 160px;
   background: #4F4F4F;
-  bottom: 0px;
+  /* bottom: 0px; */
 }
 
 div.details-caption {

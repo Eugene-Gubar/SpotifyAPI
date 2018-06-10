@@ -44,7 +44,6 @@ class ViewResult extends Component {
       var styleBgViewResults = 
       `background: url(${image});
        width: 920px;
-       height: 640px;
        background-size: cover;
        background-repeat: no-repeat;
        background-position: 50% 50%;`;

@@ -3,11 +3,11 @@ import { SEARCH_TRACKS, START, SUCCESS } from '../../constants';
 import spotifyApi, { clearBadTokenInStorage, initToken } from '../../configs/apiSpotify';
 
 
-function actionSearchTracks(search) {
+function actionSearchTracks(search, limit = 3) {
 
   return dispatch => {
     dispatch({ type: START });
-    spotifyApi.searchTracks(search, { limit: 3 })
+    spotifyApi.searchTracks(search, { limit: limit })
       .then((data) => {
         dispatch({ type: SEARCH_TRACKS + SUCCESS, search: data });
       }, (err) => {

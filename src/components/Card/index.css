@@ -1,10 +1,4 @@
-/* 
 
-div.view-results {
-  max-width: 920px;
-  max-height: 376px;
-  overflow: hidden;
-}
 
 div.card-song {
   position: relative;
@@ -27,27 +21,6 @@ div.card-song img {
   height: 240px;
 }
 
-div.strip {
-  position: absolute;
-  margin-top: 20px;
-  width: 240px;
-  height: 57px;
-  background-color: rgba(79, 79, 79, 0.5);
+.card-song:nth-child(n+4) {
+  margin: 0px 33px 68px 33px;
 }
-
-div.strip.bottom-strip {
-  bottom: 20px;
-}
-
-p.caption {
-  font-weight: bold;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin: 15px 0px;
-  max-width: 240px;
-  max-height: 27px;
-  text-align: center;
-  overflow: hidden;
-  cursor: text;
-} */

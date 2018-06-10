@@ -21,6 +21,7 @@ class SearchBar extends Component {
   constructor() {
     super();
     this.search = '';
+    this.limit = 6;
   }
 
   state = {
@@ -41,6 +42,7 @@ class SearchBar extends Component {
       <div className="search-bar">
         <input onChange={this.hGetValueSearch} onKeyPress={this.hKeyPressEnter} type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
         <span onClick={this.hSearchTracks} className="btn-search"></span>
+        <span onClick={this.hChangeLimit} className="btn-view-limit noselect">{this.limit}</span>
         {(notify) ? this.notifyMoreSymbols() : ''}
         {(loader) ? this.showLoader() : ''}
       </div>
@@ -55,15 +57,20 @@ class SearchBar extends Component {
   }
 
   hSearchTracks = () => {
-    const search = this.search;
+    const search = this.search, limit = this.limit;
     const { actionSearchTracks } = this.props;
     if (search.length > 3) {
       this.setState({notify: false});
-      actionSearchTracks(search);
+      actionSearchTracks(search, limit);
       document.getElementsByClassName('footer')[0].firstElementChild.className = 'blur select-song';
     } else {
       this.setState({notify: true});
     }
+  }
+
+  hChangeLimit = (e) => {
+    (this.limit === 3) ? (this.limit = 6) : (this.limit = 3);
+    e.target.innerHTML = this.limit;
   }
 
   notifyMoreSymbols = () => {
