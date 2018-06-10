@@ -22,6 +22,7 @@ class SearchBar extends Component {
     super();
     this.search = '';
     this.limit = 6;
+    this.offset = 0;
   }
 
   state = {
@@ -39,10 +40,12 @@ class SearchBar extends Component {
     // console.log('----------------------LOADERBOOL: ', loader);
     
     return (
-      <div className="search-bar">
+      <div className="search-bar noselect">
+        <span onClick={this.hPrevSearch} id="offset-left">{'<'}</span>
         <input onChange={this.hGetValueSearch} onKeyPress={this.hKeyPressEnter} type="text" name="search" id="search" placeholder="Search ..." title="Please enter your favorite song" autoComplete="off" />
         <span onClick={this.hSearchTracks} className="btn-search"></span>
-        <span onClick={this.hChangeLimit} className="btn-view-limit noselect">{this.limit}</span>
+        <span onClick={this.hChangeLimit} className="btn-view-limit">{this.limit}</span>
+        <span onClick={this.hNextSearch} id="offset-right">{'>'}</span>
         {(notify) ? this.notifyMoreSymbols() : ''}
         {(loader) ? this.showLoader() : ''}
       </div>
@@ -53,19 +56,33 @@ class SearchBar extends Component {
   hKeyPressEnter = (e) => {
     
     if(e.key === 'Enter') 
-      this.hSearchTracks();
+      this.hSearchTracks(e);
   }
 
-  hSearchTracks = () => {
+  hSearchTracks = (e) => {
     const search = this.search, limit = this.limit;
     const { actionSearchTracks } = this.props;
+    // console.log('OFFSET1: ', this.offset);
     if (search.length > 3) {
+      if (e && e.constructor.name === 'Class') this.offset = 0;
+      // console.log('OFFSET2: ', this.offset);
       this.setState({notify: false});
-      actionSearchTracks(search, limit);
+      actionSearchTracks(search, limit, this.offset);
       document.getElementsByClassName('footer')[0].firstElementChild.className = 'blur select-song';
     } else {
       this.setState({notify: true});
     }
+  }
+
+  hNextSearch = () => {
+    this.offset += this.limit;
+    this.hSearchTracks();
+  }
+
+  hPrevSearch = () => {
+    this.offset -= this.limit;
+    if (this.offset < 0) this.offset = 0;
+    this.hSearchTracks();
   }
 
   hChangeLimit = (e) => {
