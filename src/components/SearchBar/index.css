@@ -77,3 +77,21 @@ span.btn-view-limit {
   color: #2e2d2d;
   position: absolute;
 }
+
+#offset-right {
+  position: absolute;
+  right: -170px;
+  float: right;
+  font-size: 91px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#offset-left {
+  position: absolute;
+  left: -170px;
+  float: left;
+  font-size: 91px;
+  color: #fff;
+  cursor: pointer;
+}
