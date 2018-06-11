@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './index.css';
 import coverDisk from './img/cover-disk.svg';
+import { msToMinSec } from '../../utility';
 
 class Footer extends Component {
   static propTypes = {
@@ -54,7 +55,7 @@ class Footer extends Component {
           </div>
           <div className="details-caption">
             <p>LENGTH</p>
-            <p>{((descTrack.duration_ms)/60000).toFixed(2)}</p>
+            <p>{ msToMinSec(descTrack.duration_ms) }</p>
           </div>
           <div className="details-caption">
             <p>ALBUM</p>
